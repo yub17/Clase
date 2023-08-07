@@ -1,0 +1,1 @@
+El libro Pro Git completo escrito por Scott Chacon y Ben Straub está disponible para leer en línea de forma gratuita . Las versiones de árbol muerto están disponibles en Amazon.com .
