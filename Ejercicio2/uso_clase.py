@@ -71,10 +71,27 @@ class Municipio:
 Mun = Municipio("Toluca", "106", 783682 , 4700, 876322)
 print(Mun.getNom())
 Mun.setNom("Metepec")
+Mun.setcve("103")
 print(Mun.getNom())
 print(Mun.info())
-#print(Mun.getcve())
-#print(Mun.getpobTot())
-#print(Mun.getalt())
-#print(Mun.getsup())
-    
+print()
+
+class colonia(Municipio):
+    ah = 0
+    #Definición de un constructor
+    def __init__(self, areaH, nombre, clave, pobTotal, altitud, superficie):
+        super().__init__(nombre, clave, pobTotal, altitud, superficie)
+        self.ah = areaH
+    #Métodos de la clase GET y SET
+    def getAH(self):
+        return self.ah
+    def setAH(self, ah):
+        self.ah = ah
+    #Métodos alternativos
+    def infoAH(self, value):
+        self.ah = self.ah + value
+        self.info()
+        print (self.nom, "cuenta con ", self.ah, " áreas homogéneas") # self.nom es un atributo de la clase Municipio
+col = colonia(5, "Toluca", "106", 783682 , 4700, 876322)
+print (col.infoAH(3))
+print (col.getNom()) #La clase Colonia no tiene el método getNom() pero es accesible mediante la herencia de la clase Municipio
